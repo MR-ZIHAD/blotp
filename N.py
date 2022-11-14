@@ -97,7 +97,7 @@ def menu():
     print logo
     print ''
     print '\033[0;93mAUTHOR     : MR-RIYAD'
-    print '\033[0;94mWHATSUP  : 8801729346558'
+    print '\033[0;94mWHATSUP    : 8801729346558'
     print '\033[0;96mGITHUB     : Riyadpk0'
     print '\033[0;96mONLY BANGLADESHI ACCOUNTS ARE AVAILABLE'
     print '\033[0;91m'
