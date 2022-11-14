@@ -95,7 +95,6 @@ id = []
 def menu():
     os.system('clear')
     print logo
-    print ''
     print '\033[0;93mAUTHOR     : MR-RIYAD'
     print '\033[0;94mWHATSUP    : 8801729346558'
     print '\033[0;96mGITHUB     : Riyadpk0'
